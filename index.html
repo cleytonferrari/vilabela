@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Regressiva - Vila Bela da Santíssima Trindade</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('vilabela.jpeg');
+            /* Substitua pelo URL da sua imagem */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Efeito de escurecimento */
+            background-blend-mode: multiply;
+            /* Combina a imagem com a cor de fundo */
+            color: white;
+            /* Cor do texto para melhor contraste */
+        }
+
+        .countdown-container {
+            text-align: center;
+        }
+
+        .countdown {
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            /* Sombra no texto */
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            /* Sombra no texto */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="countdown-container">
+        <div class="countdown" id="countdown"></div>
+        <div class="message">Contagem regressiva para a aventura em Vila Bela da Santíssima Trindade!</div>
+    </div>
+
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date("April 18, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                document.getElementById("countdown").innerHTML = "A aventura começou!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Atualiza imediatamente ao carregar a página
+    </script>
+</body>
+
+</html>
