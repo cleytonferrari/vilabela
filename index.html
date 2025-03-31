@@ -5,9 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contagem Regressiva - Vila Bela da Santíssima Trindade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'Roboto', sans-serif;
+            /* Aplica a fonte Roboto */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,14 +28,20 @@
             /* Combina a imagem com a cor de fundo */
             color: white;
             /* Cor do texto para melhor contraste */
+            padding-top: 50px;
+            /* Adicionado para espaçamento */
+            flex-direction: column;
+            /* Garante que os elementos sejam empilhados verticalmente */
         }
 
         .countdown-container {
             text-align: center;
+            margin-bottom: 30px;
+            width: 90%;
         }
 
         .countdown {
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: bold;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             /* Sombra no texto */
@@ -43,6 +53,34 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             /* Sombra no texto */
         }
+
+        .programacao {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+            border: 2px solid white;
+            /* Adiciona borda branca */
+
+            /* Adiciona sombra */
+            /* Gradiente transparente */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            max-width: 800px;
+            width: 90%;
+            /* Ajuste para responsividade */
+        }
+
+        .programacao h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .programacao h3 {
+            margin-top: 20px;
+        }
+
+        .programacao p {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -50,6 +88,66 @@
     <div class="countdown-container">
         <div class="countdown" id="countdown"></div>
         <div class="message">Contagem regressiva para a aventura em Vila Bela da Santíssima Trindade!</div>
+    </div>
+
+    <div class="programacao">
+        <h2>Programação da Viagem</h2>
+
+        <h3>Dia 18 de abril </h3>
+        <p><strong>Manhã:</strong> Visita à Cascata Uirapuru </p>
+        <p><strong>Horário:</strong> 9h às 12h ⏰</p>
+        <p><strong>Distância:</strong> 25 km da cidade de Nova Lacerda </p>
+        <p><strong>Dificuldade:</strong> Fácil </p>
+        <p><strong>Observações:</strong> A cascata é uma das mais belas da região. </p>
+
+        <p><strong>Tarde:</strong> Visita à Cascatinha e Cascata dos Namorados </p>
+        <p><strong>Horário:</strong> 15h às 18h ⏰</p>
+        <p><strong>Distância:</strong> 20 km da cidade de Vila Bela </p>
+        <p><strong>Dificuldade:</strong> Fácil </p>
+        <p><strong>Observações:</strong> As cascatas são cercadas por uma área de preservação ambiental e oferecem uma
+            vista
+            deslumbrante. </p>
+
+        <h3>Dia 19 de abril </h3>
+        <p><strong>Manhã:</strong> Visita à Cachoeira do Jatobá </p>
+        <p><strong>Horário:</strong> 7h às 16h ⏰</p>
+        <p><strong>Distância:</strong> 11 km de caminhada </p>
+        <p><strong>Dificuldade:</strong> Média/Difícil </p>
+        <p><strong>Observações:</strong> A cachoeira é uma das mais bonitas da região, com uma queda de 252 metros, a 4º
+            maior do Brasil. </p>
+
+        <p><strong>Circuito das Cachoeiras</strong> ‍♂</p>
+        <p><strong>Horário:</strong> 13h às 16h ⏰</p>
+        <p><strong>Dificuldade:</strong> Média </p>
+        <p><strong>Observações:</strong> O circuito inclui visitas a várias cachoeiras da região, incluindo a Cachoeira
+            do
+            Jatobá. </p>
+
+        <h3>Dia 20 de abril </h3>
+        <p><strong>Manhã:</strong> Trilha do Poaia ‍♂</p>
+        <p><strong>Horário:</strong> 7h às 13h ⏰</p>
+        <p><strong>Distância:</strong> 7 km de caminhada </p>
+        <p><strong>Dificuldade:</strong> Média/Difícil </p>
+        <p><strong>Observações:</strong> A trilha é uma das mais desafiadoras da região, com uma subida íngreme até o
+            topo
+            do morro. </p>
+
+        <p><strong>Tarde:</strong> Visita ao Canion </p>
+        <p><strong>Horário:</strong> 14h às 18h ⏰</p>
+        <p><strong>Distância:</strong> 4 km de caminhada </p>
+        <p><strong>Dificuldade:</strong> Fácil </p>
+        <p><strong>Observações:</strong> O canion é uma formação geológica única, com paredes de pedra que se erguem até
+            100
+            metros de altura. </p>
+
+        <p><strong>Lembre-se de:</strong></p>
+        <ul>
+            <li>Verificar as condições climáticas antes de sair ⛅</li>
+            <li>Levar equipamentos de segurança, como coletes e calçados fechados </li>
+            <li>Respeitar as regras de segurança e as orientações dos guias </li>
+            <li>Levar água e alimentos para o dia todo </li>
+            <li>Respeitar o meio ambiente e não poluir as áreas visitadas</li>
+        </ul>
     </div>
 
     <script>
